@@ -1,0 +1,596 @@
+<<<<<<< HEAD
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+    border: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 3.2;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 7%;
+    background-color: #ffffff;
+    top: 0;
+    width: 100%;
+}
+
+nav a {
+    color: #000000;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 0 1rem;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #1f2797;
+}
+
+nav a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0;
+    border-bottom: 0.2rem solid;
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+nav a:hover::after {
+    transform: scaleX(0.5);
+}
+
+.home {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.home::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.home .content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 2rem;
+}
+
+.home .content video {
+    position: relative;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    z-index: -1;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #ffffff;
+}
+
+.text-overlay h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.2rem;
+}
+
+.text-overlay p {
+    font-size: 1.8rem;
+    font-style: italic;
+    margin-top: 0.1rem;
+}
+
+.video {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.video .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.video .content .video-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.video .content video {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    border-radius: 1.2rem;
+}
+
+.video .content .han {
+    border-radius: 0.5rem;
+    display: inline-block;
+    padding: 0.4rem 4rem;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #2a2e80;
+    margin-top: 2rem;
+}
+
+.video .content h2 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    color: #ffffff;
+    line-height: 1.5;
+}
+
+.video .content p {
+    font-size: 1rem;
+    color: #ffffff;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.soal {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 10rem 7%;
+}
+
+.soal .content h3 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #ffffff;
+    line-height: 2;
+}
+
+.soal .content p {
+    font-size: 1em;
+    text-align: left;
+}
+
+.about {
+    display: flex;
+    min-height: 100vh;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.about .content {
+    padding: 1rem 2%;
+    max-width: 60rem;
+}
+
+.about .content h4 {
+    text-align: center;
+    font-size: 2em;
+    color: #ffffff;
+    line-height: 3;
+}
+
+.about .content .names {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 1rem;
+    justify-content: start;
+}
+
+.about .content .name {
+    text-align: center;
+    font-size: 1.2em;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+main {
+    margin: 20px 0;
+}
+
+main section {
+    margin-bottom: 20px;
+}
+
+/* Laptop */
+@media (max-width: 1366px) {
+    html {
+        font-size: 75%;
+    }
+    nav a {
+        font-size: 1rem;
+    }
+    .text-overlay h1 {
+        font-size: 2em;
+    }
+    .text-overlay p {
+        font-size: 1.5rem;
+    }
+}
+
+/* Tablet */
+@media (max-width: 758px) {
+    html {
+        font-size: 62.5%;
+    }
+    nav {
+        padding: 1rem 5%;
+    }
+    nav a {
+        font-size: 1rem;
+        margin: 0 0.5rem;
+    }
+    .text-overlay h1 {
+        font-size: 1.8em;
+    }
+    .text-overlay p {
+        font-size: 1.2rem;
+    }
+    .video .content {
+        padding: 2rem 1rem;
+    }
+    .video .content .video-row {
+        flex-direction: column;
+    }
+}
+
+/* Mobile */
+@media (max-width: 450px) {
+    html {
+        font-size: 55%;
+    }
+    nav {
+        padding: 1rem 2%;
+    }
+    nav a {
+        font-size: 0.8rem;
+        margin: 0 0.2rem;
+    }
+    .text-overlay h1 {
+        font-size: 1.5em;
+    }
+    .text-overlay p {
+        font-size: 1rem;
+    }
+    .video .content {
+        padding: 1rem 0.5rem;
+    }
+    .soal {
+        padding: 5rem 2%;
+    }
+    .about .content .names {
+        grid-template-columns: 1fr;
+    }
+=======
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+    border: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 3.2;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 7%;
+    background-color: #ffffff;
+    top: 0;
+    width: 100%;
+}
+
+nav a {
+    color: #000000;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 0 1rem;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #1f2797;
+}
+
+nav a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0;
+    border-bottom: 0.2rem solid;
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+nav a:hover::after {
+    transform: scaleX(0.5);
+}
+
+.home {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.home::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.home .content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 2rem;
+}
+
+.home .content video {
+    position: relative;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    z-index: -1;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #ffffff;
+}
+
+.text-overlay h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.2rem;
+}
+
+.text-overlay p {
+    font-size: 1.8rem;
+    font-style: italic;
+    margin-top: 0.1rem;
+}
+
+.video {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.video .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.video .content .video-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.video .content video {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    border-radius: 1.2rem;
+}
+
+.video .content .han {
+    border-radius: 0.5rem;
+    display: inline-block;
+    padding: 0.4rem 4rem;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #2a2e80;
+    margin-top: 2rem;
+}
+
+.video .content h2 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    color: #ffffff;
+    line-height: 1.5;
+}
+
+.video .content p {
+    font-size: 1rem;
+    color: #ffffff;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.soal {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 10rem 7%;
+}
+
+.soal .content h3 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #ffffff;
+    line-height: 2;
+}
+
+.soal .content p {
+    font-size: 1em;
+    text-align: left;
+}
+
+.about {
+    display: flex;
+    min-height: 100vh;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.about .content {
+    padding: 1rem 2%;
+    max-width: 60rem;
+}
+
+.about .content h4 {
+    text-align: center;
+    font-size: 2em;
+    color: #ffffff;
+    line-height: 3;
+}
+
+.about .content .names {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 1rem;
+    justify-content: start;
+}
+
+.about .content .name {
+    text-align: center;
+    font-size: 1.2em;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+main {
+    margin: 20px 0;
+}
+
+main section {
+    margin-bottom: 20px;
+}
+
+/* Laptop */
+@media (max-width: 1366px) {
+    html {
+        font-size: 75%;
+    }
+    nav a {
+        font-size: 1rem;
+    }
+    .text-overlay h1 {
+        font-size: 2em;
+    }
+    .text-overlay p {
+        font-size: 1.5rem;
+    }
+}
+
+/* Tablet */
+@media (max-width: 758px) {
+    html {
+        font-size: 62.5%;
+    }
+    nav {
+        padding: 1rem 5%;
+    }
+    nav a {
+        font-size: 1rem;
+        margin: 0 0.5rem;
+    }
+    .text-overlay h1 {
+        font-size: 1.8em;
+    }
+    .text-overlay p {
+        font-size: 1.2rem;
+    }
+    .video .content {
+        padding: 2rem 1rem;
+    }
+    .video .content .video-row {
+        flex-direction: column;
+    }
+}
+
+/* Mobile */
+@media (max-width: 450px) {
+    html {
+        font-size: 55%;
+    }
+    nav {
+        padding: 1rem 2%;
+    }
+    nav a {
+        font-size: 0.8rem;
+        margin: 0 0.2rem;
+    }
+    .text-overlay h1 {
+        font-size: 1.5em;
+    }
+    .text-overlay p {
+        font-size: 1rem;
+    }
+    .video .content {
+        padding: 1rem 0.5rem;
+    }
+    .soal {
+        padding: 5rem 2%;
+    }
+    .about .content .names {
+        grid-template-columns: 1fr;
+    }
+>>>>>>> b3a8eb261691f0cb8159d4bb2b73e3e81026a496
+}
